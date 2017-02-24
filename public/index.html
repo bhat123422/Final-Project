@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <base href="/">
+
+    <title>Movie Booking System</title>
+
+    <!-- Angular Material CSS now available via Google CDN; version 0.9.4 used here -->
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
+
+    <!-- CSS -->
+    <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"-->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- custom styles -->
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+
+    <!-- ANGULAR CUSTOM -->
+    <script src="js/app.js"></script>
+    <script src="js/controllers/MainCtrl.js"></script>
+    <script src="js/controllers/BookingCtrl.js"></script>
+    <script src="js/services/NerdService.js"></script>
+    <script src="js/controllers/MovieCtrl.js"></script>
+    <script src="js/controllers/AssignCtrl.js"></script>
+    <script src="js/controllers/cityctrl.js"></script>
+    <script src="js/controllers/showtimeCtrl.js"></script>
+    <script src="js/controllers/theatrectrl.js"></script>
+    <script src="js/services/GeekService.js"></script>
+    <script src="js/appRoutes.js"></script>
+
+</head>
+
+<body ng-app="sampleApp" style="background-color: #eaeaea;">
+
+    <!-- Angular Material Dependencies -->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
+
+    <!-- Angular Material Javascript now available via Google CDN; version 0.9.4 used here -->
+    <script src="//ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
+
+
+    <div class="container card" style="background-color: white;">
+      <!--#68EFAD-->
+
+        <div style="padding: 1%;">
+          <center>
+            <!-- HEADER -->
+
+        <span style="padding-right: 1cm;"><a href="/" style="color:#FF4081; font-size: 130%;"><i class="fa fa-ticket" style="padding-right: 0.2cm; font-size: 130%;"></i> eClick SHOW.com</a></span>
+        <span style="padding-right: 1cm;"><a href="/" btn-flat waves-effect><i class="fa fa-home" style="padding-right: 0.2cm;"></i>Home</a></span>
+        <!-- <span style="padding-right: 1cm;"><a href="/city"><i class="fa fa-map-marker" style="
+        padding-right: 0.2cm;"></i>City</a></span>
+        <span style="padding-right: 1cm;"><a href="/movies"><i class="fa fa-film" style="padding-right: 0.2cm;"></i>Movies</a></span>
+        <span style="padding-right: 1cm;"><a href="/theatre"><i class="fa fa-film" style="padding-right: 0.2cm;"></i>Theatre</a></span>
+        <span style="padding-right: 1cm;"><a href="/showtime"><i class="fa fa-clock-o" style="padding-right: 0.2cm;"></i>Showtime</a></span> -->
+        <!-- <span style="padding-right: 1cm;"><a href="/assign"><i class="fa fa-pencil" style="padding-right: 0.2cm;"></i>Assign</a></span> -->
+       <span style="padding-right: 1cm;"> <a href="/book"><i class="fa fa-comment" style="padding-right: 0.2cm;"></i> Cancellation</a></span>
+<span style="padding-right: 1cm;"><a href="/admin"><i class="fa fa-user" style="padding-right: 0.2cm;"></i>Admin</a></span>
+<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Login</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Login/sign</h4>
+        </div>
+        <div class="modal-body">
+          <h4>Login here to access the admin panel.</h4>
+        <p>This authorization gives you the accesss to control and manage the admin panel </p>
+
+        <h4>Sign up using : </h4>
+
+
+        <a href="https://www.twitter.com">Twitter</a>
+        <a href="https://www.facebook.com">Facebook</a>
+        <a href="https://plus.google.com/">Google +</a>
+
+        <h4> Or Login here</h4>
+
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button class="btn btn-primary" type="button">Save Changes</button>
+        </div>
+      </div>
+
+      </center>
+    </div>
+  </div>
+  <br>
+  <!-- ANGULAR DYNAMIC CONTENT -->
+  <div ng-view></div>
+
+  <!--div class="footer footerpad" style="background-color: #00BBD3; color: white;">
+    <center><p>Powered by MEAN STACK</p></center>
+  </div-->
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment.js"></script>
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/mdb/jquery-3.1.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/mdb/tether.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/mdb/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb/mdb.min.js"></script>
+
+    <script>
+          // Material Select Initialization
+      $(document).ready(function() {
+       $('.mdb-select').material_select();
+      });
+
+      $('.carousel').carousel();
+
+
+    new WOW().init();
+
+    </script>
+
+
+
+ <footer>
+
+  <div class="container jumbotron">
+<div class="row">
+    <div class="col-sm-2">
+    <h6>Copyright &copy; 2017</h6>
+    </div>
+    <div class="col-sm-4">
+    <h6>About Us</h6>
+    <p>This website project was developed using new technology known as MEAN STACK, which is a complete package of front-end, back-end, and database technology using MONGODB database,EXPRESS client side Framework, ANGULAR client side Framework and NODE Server used for hosting </p>
+</div>
+
+<div class="col-sm-2">
+<h6>Navigation</h6>
+<ul class="unstyled">
+<li><a href="/home">Home</a></li>
+<li><a href="/movies">Movies</a></li>
+<li><a href="/home"></a></li>
+</ul>
+</div>
+
+<div class="col-sm-2">
+<h6>Follow Us</h6>
+<ul class="unstyled">
+<li><a href="https://www.twitter.com/">Twitter</a></li>
+<li><a href="https://www.facebook.com">Facebook</a></li>
+<li><a href="https://www.instagram.com">Instagram</a></li>
+</ul>
+
+</div>
+
+<div class="col-sm-2"></div>
+<h6> CEO SHREEYA BHAT </h6>
+
+</footer>
+
+
+
+</body>
+
+</html>

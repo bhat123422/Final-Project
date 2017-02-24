@@ -1,0 +1,45 @@
+<div class="container jumbotron text-center wow fadeInUp" data-wow-delay="0.5s">
+    <h1>Movie Booking</h1>
+
+    <p>{{ tagline }}</p>
+
+    <div>
+        <center>
+            <table class="table">
+                <thead>
+                <tr>  <span style="padding-right: 1cm;"><a href="/city"><i class="fa fa-map-marker" style="
+                  padding-right: 0.2cm;"></i>City</a></span>
+                  
+                  <span style="padding-right: 1cm;"><a href="/theatre"><i class="fa fa-film" style="padding-right: 0.2cm;"></i>Theatre</a></span>
+                  <span style="padding-right: 1cm;"><a href="/showtime"><i class="fa fa-clock-o" style="padding-right: 0.2cm;"></i>Showtime</a></span>
+  <span style="padding-right: 1cm;"><a href="/assign"><i class="fa fa-pencil" style="padding-right: 0.2cm;"></i>Assign</a></span>
+                </tr>  <tr>
+                        <th>Movie ID</th>
+                        <th>Operations</th>
+                        <th>
+
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+
+
+                        <td><input ng-model="movi.moviTitle" /></td>
+
+                        <td><button ng-click="addMovie(movi)" class="btn btn-dark-green waves-effect">Add </button></td>
+
+                        <td><button ng-click="updateMovie(movi)" class="btn btn-mdb waves-effect">Update</button></td>
+
+                    </tr>
+                    <tr ng-repeat=" movi in moviList">
+                        <td>{{movi.moviTitle}}</td>
+                        <td>{{movi.moviPoster}}</td>
+
+                        <td><button ng-click="removeMovie(movi)" class="btn btn-danger">Remove</button></td>
+                        <td><button ng-click="editMovie(movi)" class="btn btn-primary">Edit</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </center>
+    </div>
